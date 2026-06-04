@@ -1,0 +1,14 @@
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+
+from cli import main_menu
+
+
+def main():
+    print("Recipe Finder started")
+    main_menu()
+
+
+if __name__ == '__main__':
+    main()
