@@ -13,13 +13,16 @@ from filter_sort import (
     sort_recipes,
     get_all_cuisines,
 )
+from shopping import generate_shopping_list, scale_recipe
 
 
 def main_menu():
     print("\n===== 智能食谱查找器 =====")
     while True:
         print("\n1. 输入食材查找菜谱")
-        print("2. 退出")
+        print("2. 查看收藏夹")
+        print("3. 一周推荐计划")
+        print("4. 退出")
         choice = input("\n请选择: ").strip()
 
         if choice == "1":
@@ -149,8 +152,12 @@ def main_menu():
             else:
                 print(f"\n找到 {total} 个符合条件的菜谱:\n")
 
+            # 构建编号 -> recipe 映射（用于购物清单）
+            display_map = {}
+
             for idx, recipe in enumerate(display, 1):
                 recipe_id = recipe["id"]
+                display_map[idx] = recipe
                 ratio, missing_main, missing_seasonings, sub_items = result_map[
                     recipe_id
                 ]
@@ -175,9 +182,74 @@ def main_menu():
                 calories = recipe.get("nutrition", {}).get("calories", 0)
                 print(f"    总耗时: {total_time} 分钟 | 热量: {calories:.0f} kcal")
 
+            # ---- 购物清单交互 ----
+            shop_choice = input(
+                "\n输入菜谱编号查看购物清单 (0=跳过): "
+            ).strip()
+            if shop_choice != "0":
+                try:
+                    num = int(shop_choice)
+                    if num in display_map:
+                        selected = display_map[num]
+                        shopping = generate_shopping_list(
+                            selected, user_normalized, synonyms,
+                            include_seasonings=True,
+                        )
+                        if shopping:
+                            print(f"\n【购物清单】- {selected['name']}")
+                            for item in shopping:
+                                tag = "调料" if item["is_seasoning"] else "主料"
+                                print(
+                                    f"  - {item['name']} "
+                                    f"{item['quantity']} ({tag})"
+                                )
+                        else:
+                            print("该菜谱所有材料您都已具备！")
+
+                        # ---- 配方缩放 ----
+                        scale_choice = input(
+                            "\n是否需要缩放配方？(y/n): "
+                        ).strip().lower()
+                        if scale_choice == "y":
+                            factor_input = input(
+                                "请输入缩放倍数（如 2 表示双倍，0.5 表示减半）: "
+                            ).strip()
+                            try:
+                                factor = float(factor_input)
+                                if factor <= 0:
+                                    print("缩放倍数必须大于 0，已取消。")
+                                else:
+                                    scaled = scale_recipe(selected, factor)
+                                    label = (
+                                        f"{factor} 倍" if factor >= 1
+                                        else f"×{factor}"
+                                    )
+                                    print(
+                                        f"\n【缩放后配方】- "
+                                        f"{scaled['name']} ({label}份量):"
+                                    )
+                                    for ing in scaled.get("ingredients", []):
+                                        print(
+                                            f"  - {ing['name']} "
+                                            f"{ing.get('quantity', '')}"
+                                        )
+                            except ValueError:
+                                print("输入无效，已取消缩放。")
+                    else:
+                        print("无效编号，已跳过。")
+                except ValueError:
+                    print("输入无效，已跳过。")
+
         elif choice == "2":
+            print("\n功能开发中，敬请期待。")
+
+        elif choice == "3":
+            print("\n功能开发中，敬请期待。")
+
+        elif choice == "4":
             print("再见!")
             break
+
         else:
             print("无效选择，请重新输入")
 
