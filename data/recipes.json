@@ -1,0 +1,726 @@
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "番茄炒鸡蛋",
+    "ingredients": [
+      {
+        "name": "番茄",
+        "quantity": "2个"
+      },
+      {
+        "name": "鸡蛋",
+        "quantity": "3个"
+      },
+      {
+        "name": "葱",
+        "quantity": "1根"
+      },
+      {
+        "name": "盐",
+        "quantity": "适量"
+      },
+      {
+        "name": "白糖",
+        "quantity": "1茶匙"
+      },
+      {
+        "name": "食用油",
+        "quantity": "2汤匙"
+      }
+    ],
+    "steps": [
+      "番茄洗净切块，葱切葱花备用",
+      "鸡蛋打入碗中，加少许盐搅打均匀",
+      "锅中倒油烧热，倒入蛋液炒至凝固盛出",
+      "锅中留底油，放入番茄块翻炒至出汁",
+      "加入白糖和盐调味，倒入炒好的鸡蛋翻炒均匀",
+      "撒上葱花即可出锅"
+    ],
+    "prep_time": 10,
+    "cook_time": 8,
+    "cuisine": "中餐",
+    "dietary_tags": [
+      "素食"
+    ],
+    "nutrition": {
+      "calories": 180.0,
+      "protein": 12.0,
+      "fat": 13.0,
+      "carbs": 8.0
+    },
+    "rating": 0.0,
+    "ratings_count": 0,
+    "is_favorite": false
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+    "name": "红烧排骨",
+    "ingredients": [
+      {
+        "name": "猪排骨",
+        "quantity": "500克"
+      },
+      {
+        "name": "生抽",
+        "quantity": "2汤匙"
+      },
+      {
+        "name": "老抽",
+        "quantity": "1汤匙"
+      },
+      {
+        "name": "料酒",
+        "quantity": "1汤匙"
+      },
+      {
+        "name": "冰糖",
+        "quantity": "20克"
+      },
+      {
+        "name": "姜",
+        "quantity": "3片"
+      },
+      {
+        "name": "八角",
+        "quantity": "2个"
+      },
+      {
+        "name": "桂皮",
+        "quantity": "1小块"
+      },
+      {
+        "name": "盐",
+        "quantity": "适量"
+      }
+    ],
+    "steps": [
+      "排骨洗净斩成小段，冷水下锅加姜片、料酒焯水去血沫，捞出冲洗干净",
+      "热锅凉油，放入冰糖小火炒至焦糖色冒泡",
+      "倒入排骨快速翻炒上色",
+      "加入姜片、八角、桂皮炒香",
+      "倒入生抽、老抽翻炒均匀",
+      "加入没过排骨的热水，大火烧开后转小火焖煮40分钟",
+      "开大火收汁，加盐调味，汤汁浓稠即可出锅"
+    ],
+    "prep_time": 15,
+    "cook_time": 50,
+    "cuisine": "中餐",
+    "dietary_tags": [],
+    "nutrition": {
+      "calories": 420.0,
+      "protein": 28.0,
+      "fat": 32.0,
+      "carbs": 10.0
+    },
+    "rating": 0.0,
+    "ratings_count": 0,
+    "is_favorite": false
+  },
+  {
+    "id": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+    "name": "酸辣土豆丝",
+    "ingredients": [
+      {
+        "name": "土豆",
+        "quantity": "2个"
+      },
+      {
+        "name": "干辣椒",
+        "quantity": "5个"
+      },
+      {
+        "name": "花椒",
+        "quantity": "1茶匙"
+      },
+      {
+        "name": "白醋",
+        "quantity": "2汤匙"
+      },
+      {
+        "name": "盐",
+        "quantity": "适量"
+      },
+      {
+        "name": "蒜",
+        "quantity": "3瓣"
+      },
+      {
+        "name": "食用油",
+        "quantity": "3汤匙"
+      }
+    ],
+    "steps": [
+      "土豆去皮切成细丝，放入清水中浸泡10分钟去除淀粉，沥干备用",
+      "蒜切末，干辣椒剪成小段",
+      "锅中烧水，水开后放入土豆丝焯水30秒捞出过凉水",
+      "热锅倒油，放入花椒粒小火炸香后捞出弃用",
+      "放入干辣椒段和蒜末爆香",
+      "倒入土豆丝大火翻炒1分钟",
+      "沿锅边淋入白醋，加盐调味，翻炒均匀即可出锅"
+    ],
+    "prep_time": 15,
+    "cook_time": 5,
+    "cuisine": "川菜",
+    "dietary_tags": [
+      "素食",
+      "无麸质"
+    ],
+    "nutrition": {
+      "calories": 150.0,
+      "protein": 3.0,
+      "fat": 11.0,
+      "carbs": 22.0
+    },
+    "rating": 0.0,
+    "ratings_count": 0,
+    "is_favorite": false
+  },
+  {
+    "id": "d4e5f6a7-b8c9-0123-defa-234567890123",
+    "name": "清蒸鲈鱼",
+    "ingredients": [
+      {
+        "name": "鲈鱼",
+        "quantity": "1条（约600克）"
+      },
+      {
+        "name": "姜",
+        "quantity": "1块"
+      },
+      {
+        "name": "葱",
+        "quantity": "2根"
+      },
+      {
+        "name": "蒸鱼豉油",
+        "quantity": "3汤匙"
+      },
+      {
+        "name": "料酒",
+        "quantity": "1汤匙"
+      },
+      {
+        "name": "盐",
+        "quantity": "少许"
+      },
+      {
+        "name": "食用油",
+        "quantity": "2汤匙"
+      }
+    ],
+    "steps": [
+      "鲈鱼去鳞去内脏洗净，在鱼身两面各划三刀，抹少许盐和料酒腌制10分钟",
+      "姜切丝，葱切段和细丝",
+      "盘中铺上姜片和葱段，放上鲈鱼，鱼身上再放姜丝",
+      "蒸锅水烧开后放入鱼盘，大火蒸8-10分钟",
+      "蒸好后倒掉盘中汤汁，去掉姜葱，淋上蒸鱼豉油",
+      "撒上新鲜葱丝，锅中烧热油浇在葱丝上激发出香味即可"
+    ],
+    "prep_time": 15,
+    "cook_time": 10,
+    "cuisine": "粤菜",
+    "dietary_tags": [
+      "无麸质"
+    ],
+    "nutrition": {
+      "calories": 220.0,
+      "protein": 32.0,
+      "fat": 10.0,
+      "carbs": 2.0
+    },
+    "rating": 0.0,
+    "ratings_count": 0,
+    "is_favorite": false
+  },
+  {
+    "id": "e5f6a7b8-c9d0-1234-efab-345678901234",
+    "name": "麻婆豆腐",
+    "ingredients": [
+      {
+        "name": "嫩豆腐",
+        "quantity": "1块（400克）"
+      },
+      {
+        "name": "猪肉末",
+        "quantity": "100克"
+      },
+      {
+        "name": "郫县豆瓣酱",
+        "quantity": "2汤匙"
+      },
+      {
+        "name": "花椒粉",
+        "quantity": "1茶匙"
+      },
+      {
+        "name": "蒜",
+        "quantity": "3瓣"
+      },
+      {
+        "name": "姜",
+        "quantity": "1小块"
+      },
+      {
+        "name": "生抽",
+        "quantity": "1汤匙"
+      },
+      {
+        "name": "水淀粉",
+        "quantity": "适量"
+      },
+      {
+        "name": "葱花",
+        "quantity": "适量"
+      }
+    ],
+    "steps": [
+      "豆腐切成2厘米方块，放入加盐的热水中焯2分钟捞出沥干",
+      "蒜和姜切末备用",
+      "热锅倒油，放入猪肉末炒至变色",
+      "加入豆瓣酱小火炒出红油",
+      "加入姜蒜末炒香，倒入适量清水煮开",
+      "轻轻放入豆腐块，加生抽，小火煮3分钟入味",
+      "淋入水淀粉勾芡，撒花椒粉和葱花即可"
+    ],
+    "prep_time": 10,
+    "cook_time": 15,
+    "cuisine": "川菜",
+    "dietary_tags": [],
+    "nutrition": {
+      "calories": 280.0,
+      "protein": 20.0,
+      "fat": 18.0,
+      "carbs": 12.0
+    },
+    "rating": 0.0,
+    "ratings_count": 0,
+    "is_favorite": false
+  },
+  {
+    "id": "f6a7b8c9-d0e1-2345-fabc-456789012345",
+    "name": "蛋炒饭",
+    "ingredients": [
+      {
+        "name": "隔夜米饭",
+        "quantity": "2碗"
+      },
+      {
+        "name": "鸡蛋",
+        "quantity": "3个"
+      },
+      {
+        "name": "火腿肠",
+        "quantity": "1根"
+      },
+      {
+        "name": "胡萝卜",
+        "quantity": "半根"
+      },
+      {
+        "name": "青豆",
+        "quantity": "50克"
+      },
+      {
+        "name": "葱",
+        "quantity": "1根"
+      },
+      {
+        "name": "盐",
+        "quantity": "适量"
+      },
+      {
+        "name": "食用油",
+        "quantity": "3汤匙"
+      }
+    ],
+    "steps": [
+      "胡萝卜和火腿肠切小丁，葱切葱花，鸡蛋打散备用",
+      "锅中倒油烧热，倒入蛋液快速划散炒熟盛出",
+      "锅中补少许油，放入胡萝卜丁和青豆翻炒至断生",
+      "加入火腿丁翻炒均匀",
+      "倒入米饭，用铲子将米饭压散，大火翻炒至粒粒分明",
+      "倒入炒好的鸡蛋，加盐翻炒均匀",
+      "撒上葱花翻拌几下即可出锅"
+    ],
+    "prep_time": 10,
+    "cook_time": 8,
+    "cuisine": "中餐",
+    "dietary_tags": [],
+    "nutrition": {
+      "calories": 380.0,
+      "protein": 16.0,
+      "fat": 15.0,
+      "carbs": 48.0
+    },
+    "rating": 0.0,
+    "ratings_count": 0,
+    "is_favorite": false
+  },
+  {
+    "id": "a7b8c9d0-e1f2-3456-abcd-567890123456",
+    "name": "番茄牛腩汤",
+    "ingredients": [
+      {
+        "name": "牛腩",
+        "quantity": "500克"
+      },
+      {
+        "name": "番茄",
+        "quantity": "3个"
+      },
+      {
+        "name": "土豆",
+        "quantity": "1个"
+      },
+      {
+        "name": "洋葱",
+        "quantity": "半个"
+      },
+      {
+        "name": "姜",
+        "quantity": "3片"
+      },
+      {
+        "name": "番茄酱",
+        "quantity": "2汤匙"
+      },
+      {
+        "name": "盐",
+        "quantity": "适量"
+      },
+      {
+        "name": "料酒",
+        "quantity": "1汤匙"
+      }
+    ],
+    "steps": [
+      "牛腩切块冷水下锅加姜片、料酒焯水去浮沫，捞出洗净",
+      "番茄顶部划十字用开水烫后去皮切块，土豆去皮切块，洋葱切块",
+      "热锅倒油，放入洋葱炒香，加入番茄块炒至软烂出汁",
+      "加入番茄酱翻炒均匀",
+      "倒入牛腩块翻炒片刻，加入足量热水",
+      "大火烧开后转小火炖1.5小时",
+      "加入土豆块继续炖20分钟至土豆软烂，加盐调味即可"
+    ],
+    "prep_time": 20,
+    "cook_time": 110,
+    "cuisine": "中餐",
+    "dietary_tags": [
+      "无麸质"
+    ],
+    "nutrition": {
+      "calories": 350.0,
+      "protein": 30.0,
+      "fat": 18.0,
+      "carbs": 20.0
+    },
+    "rating": 0.0,
+    "ratings_count": 0,
+    "is_favorite": false
+  },
+  {
+    "id": "b8c9d0e1-f2a3-4567-bcde-678901234567",
+    "name": "宫保鸡丁",
+    "ingredients": [
+      {
+        "name": "鸡胸肉",
+        "quantity": "300克"
+      },
+      {
+        "name": "花生米",
+        "quantity": "50克"
+      },
+      {
+        "name": "黄瓜",
+        "quantity": "半根"
+      },
+      {
+        "name": "胡萝卜",
+        "quantity": "半根"
+      },
+      {
+        "name": "干辣椒",
+        "quantity": "6个"
+      },
+      {
+        "name": "花椒",
+        "quantity": "1茶匙"
+      },
+      {
+        "name": "蒜",
+        "quantity": "3瓣"
+      },
+      {
+        "name": "生抽",
+        "quantity": "1汤匙"
+      },
+      {
+        "name": "醋",
+        "quantity": "1汤匙"
+      },
+      {
+        "name": "白糖",
+        "quantity": "1汤匙"
+      },
+      {
+        "name": "淀粉",
+        "quantity": "1茶匙"
+      }
+    ],
+    "steps": [
+      "鸡胸肉切丁，加少许盐、料酒和淀粉抓匀腌制15分钟",
+      "黄瓜和胡萝卜切丁，蒜切片，干辣椒剪段",
+      "花生米小火炒至微黄盛出备用",
+      "调碗汁：生抽、醋、白糖、淀粉和少许水混合搅匀",
+      "热锅倒油，放入花椒粒和干辣椒段小火炒香",
+      "放入鸡丁滑炒至变色，加入蒜片、胡萝卜丁翻炒",
+      "加入黄瓜丁翻炒，倒入调好的碗汁快速翻炒均匀",
+      "最后加入花生米翻拌几下即可出锅"
+    ],
+    "prep_time": 20,
+    "cook_time": 10,
+    "cuisine": "川菜",
+    "dietary_tags": [],
+    "nutrition": {
+      "calories": 320.0,
+      "protein": 26.0,
+      "fat": 16.0,
+      "carbs": 14.0
+    },
+    "rating": 0.0,
+    "ratings_count": 0,
+    "is_favorite": false
+  },
+  {
+    "id": "c9d0e1f2-a3b4-5678-cdef-789012345678",
+    "name": "蒜蓉西兰花",
+    "ingredients": [
+      {
+        "name": "西兰花",
+        "quantity": "1颗"
+      },
+      {
+        "name": "蒜",
+        "quantity": "5瓣"
+      },
+      {
+        "name": "盐",
+        "quantity": "适量"
+      },
+      {
+        "name": "蚝油",
+        "quantity": "1汤匙"
+      },
+      {
+        "name": "食用油",
+        "quantity": "2汤匙"
+      }
+    ],
+    "steps": [
+      "西兰花掰成小朵，放入淡盐水中浸泡10分钟后洗净",
+      "蒜切成蒜蓉备用",
+      "锅中烧水，加少许盐和油，水开后放入西兰花焯水1分钟捞出沥干",
+      "热锅倒油，放入一半蒜蓉小火炒至金黄出香",
+      "放入西兰花大火翻炒1分钟",
+      "加入蚝油和盐翻炒均匀",
+      "出锅前撒入剩余的生蒜蓉翻拌几下即可"
+    ],
+    "prep_time": 10,
+    "cook_time": 5,
+    "cuisine": "粤菜",
+    "dietary_tags": [
+      "素食"
+    ],
+    "nutrition": {
+      "calories": 90.0,
+      "protein": 5.0,
+      "fat": 7.0,
+      "carbs": 8.0
+    },
+    "rating": 0.0,
+    "ratings_count": 0,
+    "is_favorite": false
+  },
+  {
+    "id": "d0e1f2a3-b4c5-6789-defa-890123456789",
+    "name": "红烧茄子",
+    "ingredients": [
+      {
+        "name": "茄子",
+        "quantity": "2根"
+      },
+      {
+        "name": "蒜",
+        "quantity": "4瓣"
+      },
+      {
+        "name": "生抽",
+        "quantity": "2汤匙"
+      },
+      {
+        "name": "老抽",
+        "quantity": "半汤匙"
+      },
+      {
+        "name": "白糖",
+        "quantity": "1茶匙"
+      },
+      {
+        "name": "盐",
+        "quantity": "少许"
+      },
+      {
+        "name": "淀粉",
+        "quantity": "1汤匙"
+      },
+      {
+        "name": "食用油",
+        "quantity": "适量"
+      }
+    ],
+    "steps": [
+      "茄子洗净切滚刀块，撒少许盐腌制10分钟后挤干水分",
+      "在茄子表面薄薄裹上一层淀粉",
+      "蒜切末备用",
+      "锅中多倒些油，油温七成热时放入茄子块炸至表面金黄捞出控油",
+      "锅中留少许底油，放入蒜末炒香",
+      "加入生抽、老抽、白糖和少许水煮开",
+      "放入炸好的茄子翻炒均匀，大火收汁即可"
+    ],
+    "prep_time": 15,
+    "cook_time": 10,
+    "cuisine": "中餐",
+    "dietary_tags": [
+      "素食"
+    ],
+    "nutrition": {
+      "calories": 200.0,
+      "protein": 3.0,
+      "fat": 16.0,
+      "carbs": 15.0
+    },
+    "rating": 0.0,
+    "ratings_count": 0,
+    "is_favorite": false
+  },
+  {
+    "id": "e1f2a3b4-c5d6-7890-efab-901234567890",
+    "name": "饺子",
+    "ingredients": [
+      {
+        "name": "面粉",
+        "quantity": "500克"
+      },
+      {
+        "name": "猪肉馅",
+        "quantity": "300克"
+      },
+      {
+        "name": "白菜",
+        "quantity": "300克"
+      },
+      {
+        "name": "葱",
+        "quantity": "2根"
+      },
+      {
+        "name": "姜",
+        "quantity": "1小块"
+      },
+      {
+        "name": "生抽",
+        "quantity": "2汤匙"
+      },
+      {
+        "name": "香油",
+        "quantity": "1汤匙"
+      },
+      {
+        "name": "盐",
+        "quantity": "适量"
+      },
+      {
+        "name": "五香粉",
+        "quantity": "少许"
+      }
+    ],
+    "steps": [
+      "面粉中加入适量温水揉成光滑面团，盖上湿布醒发30分钟",
+      "白菜剁碎加少许盐腌制后挤干水分",
+      "葱姜切末，与猪肉馅、白菜混合",
+      "加入生抽、香油、盐和五香粉，顺一个方向搅拌上劲",
+      "醒好的面团搓成长条，切成小剂子，擀成中间厚边缘薄的饺子皮",
+      "取适量馅料放在饺子皮中央，对折捏紧封口",
+      "锅中烧开水，放入饺子，水再次沸腾后加半碗凉水，重复三次至饺子浮起即可捞出"
+    ],
+    "prep_time": 40,
+    "cook_time": 15,
+    "cuisine": "中餐",
+    "dietary_tags": [],
+    "nutrition": {
+      "calories": 450.0,
+      "protein": 22.0,
+      "fat": 18.0,
+      "carbs": 52.0
+    },
+    "rating": 0.0,
+    "ratings_count": 0,
+    "is_favorite": false
+  },
+  {
+    "id": "f2a3b4c5-d6e7-8901-fabc-012345678901",
+    "name": "紫菜蛋花汤",
+    "ingredients": [
+      {
+        "name": "紫菜",
+        "quantity": "1张"
+      },
+      {
+        "name": "鸡蛋",
+        "quantity": "2个"
+      },
+      {
+        "name": "虾皮",
+        "quantity": "1小把"
+      },
+      {
+        "name": "葱",
+        "quantity": "1根"
+      },
+      {
+        "name": "盐",
+        "quantity": "适量"
+      },
+      {
+        "name": "香油",
+        "quantity": "几滴"
+      },
+      {
+        "name": "白胡椒粉",
+        "quantity": "少许"
+      }
+    ],
+    "steps": [
+      "紫菜撕成小片，鸡蛋打散备用，葱切葱花",
+      "虾皮用温水冲洗一下沥干",
+      "锅中加入适量清水，放入虾皮煮开",
+      "水开后转小火，将蛋液沿着筷子缓缓倒入锅中形成蛋花",
+      "放入紫菜，煮30秒",
+      "加盐和白胡椒粉调味，滴入几滴香油",
+      "盛入碗中撒上葱花即可"
+    ],
+    "prep_time": 5,
+    "cook_time": 5,
+    "cuisine": "中餐",
+    "dietary_tags": [],
+    "nutrition": {
+      "calories": 80.0,
+      "protein": 8.0,
+      "fat": 4.0,
+      "carbs": 3.0
+    },
+    "rating": 0.0,
+    "ratings_count": 0,
+    "is_favorite": false
+  }
+]
