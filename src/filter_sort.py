@@ -26,7 +26,8 @@ def filter_by_max_time(recipes: List[Dict], max_minutes: int) -> List[Dict]:
         [{"name": "番茄炒鸡蛋", "prep_time": 10, "cook_time": 8, ...}, ...]
     """
     return [
-        r for r in recipes
+        r
+        for r in recipes
         if r.get("prep_time", 0) + r.get("cook_time", 0) <= max_minutes
     ]
 
@@ -66,10 +67,7 @@ def filter_by_dietary(recipes: List[Dict], required_tags: List[str]) -> List[Dic
         [{"name": "酸辣土豆丝", "dietary_tags": ["素食", "无麸质"], ...}]
     """
     required = set(required_tags)
-    return [
-        r for r in recipes
-        if required.issubset(set(r.get("dietary_tags", [])))
-    ]
+    return [r for r in recipes if required.issubset(set(r.get("dietary_tags", [])))]
 
 
 def sort_recipes(
@@ -105,9 +103,7 @@ def sort_recipes(
     """
     if sort_key == "match_percent":
         if match_percents is None:
-            raise ValueError(
-                "match_percents is required when sort_key='match_percent'"
-            )
+            raise ValueError("match_percents is required when sort_key='match_percent'")
         return sorted(
             recipes,
             key=lambda r: match_percents.get(r.get("id", ""), 0.0),
@@ -153,3 +149,106 @@ def get_all_cuisines(recipes: List[Dict]) -> List[str]:
         if cuisine:
             cuisines.add(cuisine)
     return sorted(cuisines)
+
+
+# ---------------------------------------------------------------------------
+# 按地理区域分组的菜系映射表（新导入菜谱的菜系均在此注册）
+# ---------------------------------------------------------------------------
+_CUISINE_REGION_MAP: Dict[str, str] = {
+    # ── 中餐家族 ──
+    "中餐": "中餐家族",
+    "川菜": "中餐家族",
+    "粤菜": "中餐家族",
+    # ── 亚洲菜系 ──
+    "日料": "亚洲菜系",
+    "韩餐": "亚洲菜系",
+    "印度菜": "亚洲菜系",
+    "泰国菜": "亚洲菜系",
+    "越南菜": "亚洲菜系",
+    "马来西亚菜": "亚洲菜系",
+    "菲律宾菜": "亚洲菜系",
+    "土耳其菜": "亚洲菜系",
+    "沙特阿拉伯菜": "亚洲菜系",
+    "叙利亚菜": "亚洲菜系",
+    # ── 欧洲菜系 ──
+    "意大利菜": "欧洲菜系",
+    "法国菜": "欧洲菜系",
+    "西班牙菜": "欧洲菜系",
+    "英国菜": "欧洲菜系",
+    "希腊菜": "欧洲菜系",
+    "俄罗斯菜": "欧洲菜系",
+    "波兰菜": "欧洲菜系",
+    "荷兰菜": "欧洲菜系",
+    "葡萄牙菜": "欧洲菜系",
+    "爱尔兰菜": "欧洲菜系",
+    "克罗地亚菜": "欧洲菜系",
+    "挪威菜": "欧洲菜系",
+    "乌克兰菜": "欧洲菜系",
+    "斯洛伐克菜": "欧洲菜系",
+    # ── 美洲菜系 ──
+    "美式": "美洲菜系",
+    "墨西哥菜": "美洲菜系",
+    "加拿大菜": "美洲菜系",
+    "阿根廷菜": "美洲菜系",
+    "委内瑞拉菜": "美洲菜系",
+    "乌拉圭菜": "美洲菜系",
+    "牙买加菜": "美洲菜系",
+    "巴西菜": "美洲菜系",
+    "智利菜": "美洲菜系",
+    # ── 非洲及其他 ──
+    "摩洛哥菜": "非洲及其他",
+    "埃及菜": "非洲及其他",
+    "突尼斯菜": "非洲及其他",
+    "阿尔及利亚菜": "非洲及其他",
+    "肯尼亚菜": "非洲及其他",
+    "澳大利亚菜": "非洲及其他",
+    "其他": "非洲及其他",
+}
+
+# 分组顺序（用户可见的大类顺序）
+_REGION_ORDER: List[str] = [
+    "中餐家族",
+    "亚洲菜系",
+    "欧洲菜系",
+    "美洲菜系",
+    "非洲及其他",
+]
+
+
+def get_cuisine_groups(recipes: List[Dict]) -> Dict[str, List[str]]:
+    """将菜谱的菜系按地理区域分组，返回用于两级菜单展示的字典。
+
+    第一级为大区（中餐家族 / 亚洲 / 欧洲 / 美洲 / 非洲及其他），
+    每个大区下包含若干具体菜系（已去重、已排序）。
+
+    Args:
+        recipes: 菜谱列表。
+
+    Returns:
+        OrderedDict-alike: key 为大区名，value 为该大区下的菜系列表。
+        大区按 ``_REGION_ORDER`` 顺序输出，菜系列表按中文拼音排序。
+
+    Example:
+        >>> groups = get_cuisine_groups(recipes)
+        >>> for region, cuisines in groups.items():
+        ...     print(f"{region}: {cuisines}")
+    """
+    groups: Dict[str, List[str]] = {region: [] for region in _REGION_ORDER}
+    seen: Dict[str, set] = {region: set() for region in _REGION_ORDER}
+
+    # 收集每个大区下的菜系
+    for r in recipes:
+        cuisine = r.get("cuisine", "")
+        if not cuisine:
+            continue
+        region = _CUISINE_REGION_MAP.get(cuisine, "非洲及其他")
+        if region not in seen:
+            seen[region] = set()
+        seen[region].add(cuisine)
+
+    # 排序每个大区下的菜系，过滤掉空大区
+    result: Dict[str, List[str]] = {}
+    for region in _REGION_ORDER:
+        if seen.get(region):
+            result[region] = sorted(seen[region])
+    return result

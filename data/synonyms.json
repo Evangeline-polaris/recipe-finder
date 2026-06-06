@@ -1,0 +1,595 @@
+{
+  "番茄": [
+    "西红柿",
+    "圣女果"
+  ],
+  "马铃薯": [
+    "土豆",
+    "洋芋"
+  ],
+  "香菜": [
+    "芫荽",
+    "香荽",
+    "胡荽"
+  ],
+  "鸡肉": [
+    "鸡",
+    "鸡胸",
+    "鸡腿",
+    "走地鸡"
+  ],
+  "牛肉": [
+    "牛腱",
+    "牛腩",
+    "牛排肉",
+    "嫩牛肉"
+  ],
+  "猪肉": [
+    "猪",
+    "五花肉",
+    "里脊肉",
+    "前腿肉"
+  ],
+  "蒜": [
+    "大蒜",
+    "蒜瓣",
+    "蒜头"
+  ],
+  "洋葱": [
+    "葱头",
+    "洋葱头"
+  ],
+  "虾": [
+    "虾仁",
+    "大虾",
+    "鲜虾",
+    "基围虾"
+  ],
+  "生抽": [
+    "酱油",
+    "鲜酱油"
+  ],
+  "橄榄油": [
+    "橄榄油脂"
+  ],
+  "意大利面": [
+    "意面",
+    "意大利面条",
+    "直身粉"
+  ],
+  "奶酪": [
+    "芝士",
+    "干酪",
+    "乳酪",
+    "起司"
+  ],
+  "奶油": [
+    "淡奶油",
+    "鲜奶油",
+    "忌廉"
+  ],
+  "酸奶": [
+    "酸乳",
+    "优格",
+    "发酵乳"
+  ],
+  "辣椒": [
+    "红辣椒",
+    "干椒",
+    "辣子"
+  ],
+  "甜椒": [
+    "彩椒",
+    "灯笼椒",
+    "柿子椒"
+  ],
+  "米饭": [
+    "白饭",
+    "大米饭",
+    "熟米饭"
+  ],
+  "意面": [
+    "意大利面",
+    "面条",
+    "通心粉"
+  ],
+  "西兰花": [
+    "花椰菜",
+    "青花菜",
+    "绿花菜"
+  ],
+  "卷心菜": [
+    "圆白菜",
+    "包菜",
+    "甘蓝",
+    "大头菜"
+  ],
+  "芹菜": [
+    "西芹",
+    "旱芹",
+    "香芹"
+  ],
+  "胡萝卜": [
+    "红萝卜",
+    "甘笋",
+    "萝卜"
+  ],
+  "蘑菇": [
+    "菌菇",
+    "草菇",
+    "口蘑",
+    "香菇"
+  ],
+  "菠菜": [
+    "波菜"
+  ],
+  "孜然粉": [
+    "孜然",
+    "小茴香粉"
+  ],
+  "辣椒粉": [
+    "辣椒面",
+    "红椒粉",
+    "Hot Chilli Powder"
+  ],
+  "香叶": [
+    "月桂叶"
+  ],
+  "咖喱粉": [
+    "咖喱",
+    "咖哩粉"
+  ],
+  "高汤": [
+    "汤底",
+    "清汤",
+    "浓汤"
+  ],
+  "葡萄酒": [
+    "红酒",
+    "白葡萄酒"
+  ],
+  "虾仁": [
+    "虾",
+    "大虾仁",
+    "鲜虾仁"
+  ],
+  "黄油": [
+    "牛油",
+    "乳脂"
+  ],
+  "多用途调料": [
+    "All-Purpose Seasoning"
+  ],
+  "多香果": [
+    "Allspice Berries"
+  ],
+  "安乔干辣椒": [
+    "Ancho Chillies"
+  ],
+  "烧烤酱": [
+    "Barbeque Sauce"
+  ],
+  "啤酒": [
+    "Beer"
+  ],
+  "鸟眼辣椒": [
+    "Birds-Eye Chillies"
+  ],
+  "高汤块": [
+    "Bouillon Cubes"
+  ],
+  "白兰地": [
+    "Brandy"
+  ],
+  "荞麦粉": [
+    "Buckwheat Flour"
+  ],
+  "芥花籽油": [
+    "Canola Oil"
+  ],
+  "水瓜柳": [
+    "Capers"
+  ],
+  "焦糖酱": [
+    "Caramel Sauce"
+  ],
+  "焦糖糖浆": [
+    "Caramelized Sugar Sauce"
+  ],
+  "葛缕子籽": [
+    "Caraway Seed"
+  ],
+  "辣椒碎": [
+    "Chilli Flakes"
+  ],
+  "辣椒酱": [
+    "Chilli Sauce"
+  ],
+  "奇米丘里酱": [
+    "Chimichurri Sauce"
+  ],
+  "五香粉": [
+    "Chinese Five Spice Powder",
+    "Five Spice Powder"
+  ],
+  "芝麻酱": [
+    "Chinese Sesame Sauce"
+  ],
+  "细香葱": [
+    "Chives"
+  ],
+  "葱花": [
+    "Chopped Chive"
+  ],
+  "欧芹碎": [
+    "Chopped Parsley"
+  ],
+  "苹果醋": [
+    "Cider Vinegar"
+  ],
+  "香菜叶": [
+    "Cilantro Leaves",
+    "Coriander Leaves"
+  ],
+  "清蜂蜜": [
+    "Clear Honey"
+  ],
+  "丁香": [
+    "Clove"
+  ],
+  "椰子糖": [
+    "Coco Sugar"
+  ],
+  "料酒": [
+    "Cooking Wine"
+  ],
+  "香菜籽": [
+    "Coriander Seeds"
+  ],
+  "吉士粉": [
+    "Custard Powder"
+  ],
+  "深色软红糖": [
+    "Dark Brown Soft Sugar"
+  ],
+  "深色红糖": [
+    "Dark Brown Sugar"
+  ],
+  "黑朗姆酒": [
+    "Dark Rum"
+  ],
+  "第戎芥末酱": [
+    "Dijon Mustard"
+  ],
+  "干辣椒": [
+    "Dried Chillies"
+  ],
+  "干莳萝": [
+    "Dried Dill"
+  ],
+  "干薄荷": [
+    "Dried Mint"
+  ],
+  "干牛至": [
+    "Dried Oregano"
+  ],
+  "干红辣椒": [
+    "Dried Red Chillies"
+  ],
+  "干雪莉酒": [
+    "Dry Sherry"
+  ],
+  "干白葡萄酒": [
+    "Dry White Wine"
+  ],
+  "恩奇拉达酱": [
+    "Enchilada Sauce"
+  ],
+  "英式芥末酱": [
+    "English Mustard"
+  ],
+  "法吉塔调料": [
+    "Fajita Seasoning"
+  ],
+  "快速酵母": [
+    "Fast Action Yeast"
+  ],
+  "茴香籽": [
+    "Fennel Seeds"
+  ],
+  "葫芦巴": [
+    "Fenugreek"
+  ],
+  "鲜罗勒": [
+    "Fresh Basil"
+  ],
+  "鲜百里香": [
+    "Fresh Thyme"
+  ],
+  "鲜欧芹碎": [
+    "Freshly Chopped Parsley"
+  ],
+  "南姜": [
+    "Galangal"
+  ],
+  "南姜酱": [
+    "Galangal Paste"
+  ],
+  "葛拉姆马萨拉": [
+    "Garam Masala"
+  ],
+  "蒜粒": [
+    "Garlic Granules"
+  ],
+  "蒜粉": [
+    "Garlic Powder"
+  ],
+  "蒜蓉酱": [
+    "Garlic Sauce"
+  ],
+  "吉利丁片": [
+    "Gelatine Leafs"
+  ],
+  "姜蒜酱": [
+    "Ginger Garlic Paste"
+  ],
+  "姜酱": [
+    "Ginger Paste"
+  ],
+  "金黄细砂糖": [
+    "Golden Caster Sugar"
+  ],
+  "黄金糖浆": [
+    "Golden Syrup"
+  ],
+  "白砂糖": [
+    "Granulated Sugar"
+  ],
+  "多香果粉": [
+    "Ground Allspice"
+  ],
+  "丁香粉": [
+    "Ground Clove"
+  ],
+  "香菜粉": [
+    "Ground Coriander"
+  ],
+  "芥末粉": [
+    "Ground Mustard",
+    "Mustard Powder"
+  ],
+  "花生油": [
+    "Ground Nut Oil",
+    "Peanut Oil"
+  ],
+  "肉豆蔻粉": [
+    "Ground Nutmeg"
+  ],
+  "罂粟籽粉": [
+    "Ground Poppy Seeds"
+  ],
+  "糖粉": [
+    "Ground Sugar",
+    "Powdered Sugar"
+  ],
+  "姜黄粉": [
+    "Ground Turmeric",
+    "Turmeric Powder"
+  ],
+  "哈里萨辣酱": [
+    "Harissa Spice"
+  ],
+  "高温烹饪油": [
+    "High Heat Cooking Oil"
+  ],
+  "海鲜酱": [
+    "Hoisin Sauce"
+  ],
+  "辣薄荷": [
+    "Hot Mint"
+  ],
+  "烟熏辣椒粉": [
+    "Hot Smoked Paprika",
+    "Smoky Paprika"
+  ],
+  "辣酱": [
+    "Hotsauce"
+  ],
+  "即发酵母": [
+    "Instant Yeast"
+  ],
+  "意大利综合香料": [
+    "Italian Seasoning"
+  ],
+  "牙买加咖喱粉": [
+    "Jamaican Curry Powder"
+  ],
+  "卡布萨香料": [
+    "Kabse Spice"
+  ],
+  "贡布胡椒": [
+    "Kampot Pepper"
+  ],
+  "浅色软红糖": [
+    "Light Brown Soft Sugar"
+  ],
+  "马德拉斯咖喱酱": [
+    "Madras Paste"
+  ],
+  "麦芽醋": [
+    "Malt Vinegar"
+  ],
+  "马郁兰": [
+    "Marjoram"
+  ],
+  "玛莎曼咖喱酱": [
+    "Massaman Curry Paste"
+  ],
+  "混合香料": [
+    "Mixed Spice"
+  ],
+  "糖蜜": [
+    "Molasses"
+  ],
+  "芥末籽": [
+    "Mustard Seeds"
+  ],
+  "椰糖": [
+    "Palm Sugar"
+  ],
+  "帕能咖喱酱": [
+    "Panang Curry Paste"
+  ],
+  "墨西哥鲜酱": [
+    "Pico De Gallo Sauce"
+  ],
+  "粉色食用色素": [
+    "Pink Food Colouring"
+  ],
+  "苏梅酱": [
+    "Plum Sauce"
+  ],
+  "罂粟籽": [
+    "Poppy Seeds"
+  ],
+  "菜籽油": [
+    "Rapeseed Oil"
+  ],
+  "红辣椒碎": [
+    "Red Chilli Flakes"
+  ],
+  "红辣椒粉": [
+    "Red Chilli Powder"
+  ],
+  "红椒碎": [
+    "Red Pepper Flakes"
+  ],
+  "红椒酱": [
+    "Red Pepper Paste"
+  ],
+  "鼠尾草": [
+    "Sage"
+  ],
+  "德式酸菜": [
+    "Sauerkraut"
+  ],
+  "海鲜高汤": [
+    "Seafood Stock"
+  ],
+  "调味料": [
+    "Seasoning"
+  ],
+  "粗粒小麦粉": [
+    "Semolina Flour"
+  ],
+  "绍兴料酒": [
+    "Shaoxing Wine"
+  ],
+  "雪莉酒": [
+    "Sherry"
+  ],
+  "雪莉醋": [
+    "Sherry Vinegar"
+  ],
+  "花椒": [
+    "Sichuan Pepper"
+  ],
+  "荷兰香料粉": [
+    "Speculaas Spice Mix"
+  ],
+  "八角": [
+    "Star Anise"
+  ],
+  "淀粉": [
+    "Starch"
+  ],
+  "高筋白面粉": [
+    "Strong White Flour"
+  ],
+  "高筋全麦粉": [
+    "Strong Wholemeal Flour"
+  ],
+  "糖浆": [
+    "Sugar Syrup"
+  ],
+  "漆树粉": [
+    "Sumac"
+  ],
+  "甜辣酱": [
+    "Sweet Chilli Sauce"
+  ],
+  "甜雪莉酒": [
+    "Sweet Sherry"
+  ],
+  "甜烟熏辣椒粉": [
+    "Sweet Smoked Paprika"
+  ],
+  "塔巴斯科辣酱": [
+    "Tabasco Sauce",
+    "Tobasco Sauce"
+  ],
+  "白芝麻酱": [
+    "Tahini",
+    "Tahini Paste"
+  ],
+  "罗望子酱": [
+    "Tamarind Paste"
+  ],
+  "龙蒿叶": [
+    "Tarragon Leaves"
+  ],
+  "天妇罗粉": [
+    "Tempura Flour"
+  ],
+  "泰式辣椒酱": [
+    "Thai Chilli Jam"
+  ],
+  "泰式绿咖喱酱": [
+    "Thai Green Curry Paste"
+  ],
+  "泰式红咖喱酱": [
+    "Thai Red Curry Paste"
+  ],
+  "松露油": [
+    "Truffle Oil"
+  ],
+  "无味吉利丁": [
+    "Unflavoured Gelatin"
+  ],
+  "香草": [
+    "Vanilla"
+  ],
+  "香草豆酱": [
+    "Vanilla Bean Paste"
+  ],
+  "香草荚": [
+    "Vanilla Pod"
+  ],
+  "香草糖": [
+    "Vanilla Sugar"
+  ],
+  "纯素白葡萄酒醋": [
+    "Vegan White Wine Vinegar"
+  ],
+  "蔬菜高汤块": [
+    "Vegetable Stock Cube"
+  ],
+  "油醋汁": [
+    "Vinaigrette Dressing"
+  ],
+  "面粉": [
+    "Wheat Flour"
+  ],
+  "白面粉": [
+    "White Flour"
+  ],
+  "白醋": [
+    "White Vinegar"
+  ],
+  "白葡萄酒醋": [
+    "White Wine Vinegar"
+  ],
+  "黄色食用色素": [
+    "Yellow Food Colouring"
+  ]
+}

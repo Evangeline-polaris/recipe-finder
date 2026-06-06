@@ -52,7 +52,7 @@ def format_quantity(quantity_str: str, factor: float) -> str:
     else:
         new_num_str = f"{new_num:.2f}".rstrip("0").rstrip(".")
 
-    return quantity_str[: match.start()] + new_num_str + quantity_str[match.end():]
+    return quantity_str[: match.start()] + new_num_str + quantity_str[match.end() :]
 
 
 def scale_recipe(recipe: Dict, factor: float) -> Dict:
@@ -76,9 +76,7 @@ def scale_recipe(recipe: Dict, factor: float) -> Dict:
     scaled = copy.deepcopy(recipe)
     for ingredient in scaled.get("ingredients", []):
         if "quantity" in ingredient:
-            ingredient["quantity"] = format_quantity(
-                ingredient["quantity"], factor
-            )
+            ingredient["quantity"] = format_quantity(ingredient["quantity"], factor)
     return scaled
 
 
@@ -128,10 +126,12 @@ def generate_shopping_list(
         if is_seasoning and not include_seasonings:
             continue
 
-        shopping_list.append({
-            "name": raw_name,
-            "quantity": ingredient.get("quantity", ""),
-            "is_seasoning": is_seasoning,
-        })
+        shopping_list.append(
+            {
+                "name": raw_name,
+                "quantity": ingredient.get("quantity", ""),
+                "is_seasoning": is_seasoning,
+            }
+        )
 
     return shopping_list
