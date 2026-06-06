@@ -18,25 +18,124 @@ import shutil
 import os
 
 MEAT_KEYWORDS = [
-    "肉", "猪", "牛", "羊", "鸡", "鸭", "鹅", "鱼", "虾", "蟹", "贝", "鱿",
-    "培根", "火腿", "香肠", "腊肠", "咸鱼", "肉末", "排骨", "里脊", "肘子",
-    "五花", "腿肉", "胸肉", "鸡翅", "鸡腿", "鸡爪", "鸡胗", "鸡心",
-    "牛腩", "牛腱", "牛尾", "牛排", "羊排", "羊腿", "三文鱼", "鳕鱼",
-    "金枪鱼", "沙丁", "龙虾", "牡蛎", "蛤蜊", "海参", "鲍鱼",
-    "lamb", "beef", "chicken", "pork", "fish", "shrimp", "prawn",
-    "crab", "lobster", "mussel", "oyster", "salmon", "tuna", "cod",
-    "sardine", "bacon", "sausage", "ham", "turkey", "duck", "goose",
-    "veal", "venison", "mince", "meat", "squid", "octopus", "scallop",
-    "anchovy", "caviar", "鳗", "鲈", "鲫", "鲤", "鳊", "鲶", "鲢",
-    "鳝", "泥鳅", "带鱼", "黄鱼", "马鲛", "剥皮鱼", "多宝鱼",
+    "肉",
+    "猪",
+    "牛",
+    "羊",
+    "鸡",
+    "鸭",
+    "鹅",
+    "鱼",
+    "虾",
+    "蟹",
+    "贝",
+    "鱿",
+    "培根",
+    "火腿",
+    "香肠",
+    "腊肠",
+    "咸鱼",
+    "肉末",
+    "排骨",
+    "里脊",
+    "肘子",
+    "五花",
+    "腿肉",
+    "胸肉",
+    "鸡翅",
+    "鸡腿",
+    "鸡爪",
+    "鸡胗",
+    "鸡心",
+    "牛腩",
+    "牛腱",
+    "牛尾",
+    "牛排",
+    "羊排",
+    "羊腿",
+    "三文鱼",
+    "鳕鱼",
+    "金枪鱼",
+    "沙丁",
+    "龙虾",
+    "牡蛎",
+    "蛤蜊",
+    "海参",
+    "鲍鱼",
+    "lamb",
+    "beef",
+    "chicken",
+    "pork",
+    "fish",
+    "shrimp",
+    "prawn",
+    "crab",
+    "lobster",
+    "mussel",
+    "oyster",
+    "salmon",
+    "tuna",
+    "cod",
+    "sardine",
+    "bacon",
+    "sausage",
+    "ham",
+    "turkey",
+    "duck",
+    "goose",
+    "veal",
+    "venison",
+    "mince",
+    "meat",
+    "squid",
+    "octopus",
+    "scallop",
+    "anchovy",
+    "caviar",
+    "鳗",
+    "鲈",
+    "鲫",
+    "鲤",
+    "鳊",
+    "鲶",
+    "鲢",
+    "鳝",
+    "泥鳅",
+    "带鱼",
+    "黄鱼",
+    "马鲛",
+    "剥皮鱼",
+    "多宝鱼",
 ]
 
 ANIMAL_PRODUCT_KEYWORDS = [
-    "蛋", "鸡蛋", "鸭蛋", "鹅蛋", "鹌鹑蛋",
-    "奶", "牛奶", "奶粉", "黄油", "奶油", "芝士", "奶酪",
-    "蜂蜜", "酸奶", "炼乳", "淡奶", "酥油",
-    "egg", "milk", "butter", "cream", "cheese", "honey",
-    "yogurt", "ghee", "whey", "curd",
+    "蛋",
+    "鸡蛋",
+    "鸭蛋",
+    "鹅蛋",
+    "鹌鹑蛋",
+    "奶",
+    "牛奶",
+    "奶粉",
+    "黄油",
+    "奶油",
+    "芝士",
+    "奶酪",
+    "蜂蜜",
+    "酸奶",
+    "炼乳",
+    "淡奶",
+    "酥油",
+    "egg",
+    "milk",
+    "butter",
+    "cream",
+    "cheese",
+    "honey",
+    "yogurt",
+    "ghee",
+    "whey",
+    "curd",
 ]
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -45,7 +144,14 @@ BACKUP_PATH = os.path.join(BASE_DIR, "data", "recipes.json.bak")
 
 
 def has_meat(recipe: dict) -> bool:
-    """检查菜谱食材中是否包含肉类/鱼类/海鲜。"""
+    """检查菜谱食材中是否包含肉类、鱼类或海鲜。
+
+    Args:
+        recipe: 菜谱字典，需包含 ``"ingredients"`` 列表。
+
+    Returns:
+        True 如果任一食材名称包含 MEAT_KEYWORDS 中的关键词。
+    """
     for ing in recipe.get("ingredients", []):
         name_lower = ing["name"].lower()
         for kw in MEAT_KEYWORDS:
@@ -55,7 +161,14 @@ def has_meat(recipe: dict) -> bool:
 
 
 def has_animal_product(recipe: dict) -> bool:
-    """检查菜谱食材中是否包含动物产品（蛋/奶/黄油等）。"""
+    """检查菜谱食材中是否包含动物产品（蛋、奶、黄油、蜂蜜等）。
+
+    Args:
+        recipe: 菜谱字典，需包含 ``"ingredients"`` 列表。
+
+    Returns:
+        True 如果任一食材名称包含 ANIMAL_PRODUCT_KEYWORDS 中的关键词。
+    """
     for ing in recipe.get("ingredients", []):
         name_lower = ing["name"].lower()
         for kw in ANIMAL_PRODUCT_KEYWORDS:
@@ -65,7 +178,26 @@ def has_animal_product(recipe: dict) -> bool:
 
 
 def compute_tags(recipe: dict) -> list:
-    """根据菜谱内容计算应添加的标签列表（不包含已有标签）。"""
+    """根据菜谱内容计算应添加的标签列表。
+
+    标签规则（含冲突检测）：
+      - 素食：食材不含肉类/鱼类/海鲜
+      - 荤菜：食材含肉类/鱼类/海鲜（与素食互斥）
+      - 纯素食：素食 + 不含蛋/奶/黄油/蜂蜜等动物产品
+      - 高蛋白：protein >= 30g
+      - 低卡：calories <= 250 kcal
+      - 低碳水：carbs <= 20g
+      - 快手：total_time <= 30 min
+
+    已存在的标签不会被重复添加。
+
+    Args:
+        recipe: 菜谱字典，需包含 ``"ingredients"``、``"nutrition"``、
+            ``"prep_time"``、``"cook_time"`` 和 ``"dietary_tags"`` 字段。
+
+    Returns:
+        仅在菜谱中不存在的新标签列表。
+    """
     existing = set(recipe.get("dietary_tags", []))
     new_tags = set()
 
@@ -111,6 +243,14 @@ def compute_tags(recipe: dict) -> list:
 
 
 def main():
+    """批量给 recipes.json 打饮食标签的入口函数。
+
+    执行流程：
+    1. 备份原始 recipes.json 到 recipes.json.bak。
+    2. 读取所有菜谱，对每个菜谱调用 ``compute_tags`` 计算新标签。
+    3. 将新标签追加到菜谱的 ``dietary_tags`` 字段。
+    4. 写回 recipes.json 并输出统计信息。
+    """
     # 备份原文件
     shutil.copy2(RECIPES_PATH, BACKUP_PATH)
     print(f"已备份到: {BACKUP_PATH}")
@@ -118,8 +258,15 @@ def main():
     with open(RECIPES_PATH, "r", encoding="utf-8") as f:
         recipes = json.load(f)
 
-    stats = {"新增荤菜": 0, "新增素食": 0, "新增纯素食": 0, "新增高蛋白": 0,
-             "新增低卡": 0, "新增低碳水": 0, "新增快手": 0}
+    stats = {
+        "新增荤菜": 0,
+        "新增素食": 0,
+        "新增纯素食": 0,
+        "新增高蛋白": 0,
+        "新增低卡": 0,
+        "新增低碳水": 0,
+        "新增快手": 0,
+    }
 
     for recipe in recipes:
         new_tags = compute_tags(recipe)

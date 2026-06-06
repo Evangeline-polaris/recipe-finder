@@ -4,9 +4,16 @@ from typing import Any, Dict, List
 
 
 def parse_ingredients_input(raw: str) -> List[str]:
-    """Split a comma-separated ingredient string into a cleaned list.
+    """将逗号分隔的食材字符串解析为清洗后的列表。
 
-    Handles both half-width (,) and full-width (，) commas.
+    同时处理半角逗号 (``,``) 和全角逗号 (``，``)，
+    去除每个元素的首尾空白，并过滤空字符串。
+
+    Args:
+        raw: 用户输入的原始字符串，如 ``"番茄, 鸡蛋，葱"``。
+
+    Returns:
+        清洗后的食材名称列表，如 ``["番茄", "鸡蛋", "葱"]``。
     """
     return [i.strip() for i in raw.replace("，", ",").split(",") if i.strip()]
 

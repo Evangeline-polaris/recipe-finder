@@ -77,8 +77,10 @@ def _prompt_int_range(
             num = int(choice)
             if min_val <= num <= max_val:
                 return num
-            print(f"无效输入，请输入 {min_val}~{max_val} 之间的数字"
-                  + ("，或 0 跳过" if allow_zero else ""))
+            print(
+                f"无效输入，请输入 {min_val}~{max_val} 之间的数字"
+                + ("，或 0 跳过" if allow_zero else "")
+            )
         except ValueError:
             print("输入无效，请输入数字")
 
@@ -134,7 +136,14 @@ def main_menu():
 
 
 def get_user_ingredients():
-    """获取用户输入的食材列表（原始名称）。"""
+    """从命令行交互获取用户输入的食材列表。
+
+    提示用户输入逗号分隔的食材名称，使用 ``parse_ingredients_input``
+    解析并返回原始名称列表。
+
+    Returns:
+        食材名称列表（原始名称，未归一化）。如果用户未输入则返回空列表。
+    """
     user_input = input("请输入你拥有的食材（用逗号分隔）: ").strip()
     return parse_ingredients_input(user_input) if user_input else []
 
@@ -348,7 +357,16 @@ def search_recipes_menu():
         if not valid_tags:
             print("没有可用的饮食标签。")
         else:
-            TAG_ORDER = ["荤菜", "素食", "纯素食", "低卡", "低碳水", "快手", "无麸质", "高蛋白"]
+            TAG_ORDER = [
+                "荤菜",
+                "素食",
+                "纯素食",
+                "低卡",
+                "低碳水",
+                "快手",
+                "无麸质",
+                "高蛋白",
+            ]
             sorted_tags = [t for t in TAG_ORDER if t in valid_tags]
             tag_map = {str(i): tag for i, tag in enumerate(sorted_tags, 1)}
             print(
@@ -389,9 +407,7 @@ def search_recipes_menu():
     print("1. 按匹配度降序")
     print("2. 按总耗时升序")
     print("3. 按热量升序")
-    sort_choice = _prompt_int_range(
-        "请输入序号 (1/2/3)", 1, 3, allow_zero=False
-    )
+    sort_choice = _prompt_int_range("请输入序号 (1/2/3)", 1, 3, allow_zero=False)
     sort_map = {1: "match", 2: "time", 3: "calories"}
     sort_by = sort_map[sort_choice]
 
@@ -471,13 +487,9 @@ def search_recipes_menu():
                             continue
                         scaled = scale_recipe(selected, factor)
                         label = f"{factor} 倍" if factor >= 1 else f"×{factor}"
-                        print(
-                            f"\n【缩放后配方】- " f"{scaled['name']} ({label}份量):"
-                        )
+                        print(f"\n【缩放后配方】- " f"{scaled['name']} ({label}份量):")
                         for ing in scaled.get("ingredients", []):
-                            print(
-                                f"  - {ing['name']} " f"{ing.get('quantity', '')}"
-                            )
+                            print(f"  - {ing['name']} " f"{ing.get('quantity', '')}")
                         break
                     except ValueError:
                         print("输入无效，请输入数字")
