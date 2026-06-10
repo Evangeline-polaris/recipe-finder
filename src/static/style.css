@@ -1,0 +1,389 @@
+/* ============================================================
+   Recipe Finder - Custom Styles
+   A clean, modern UI for the recipe search application.
+   ============================================================ */
+
+/* ── CSS Variables ── */
+:root {
+    --primary: #e65c00;
+    --primary-light: #ff7b25;
+    --primary-dark: #c44e00;
+    --bg-light: #fdf6f0;
+    --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    --card-hover-shadow: 0 6px 24px rgba(0, 0, 0, 0.10);
+    --radius: 16px;
+}
+
+/* ── Navbar Overrides ── */
+.navbar {
+    background: linear-gradient(135deg, #e65c00 0%, #ff7b25 100%) !important;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+.navbar-brand {
+    font-size: 1.35rem;
+    letter-spacing: -0.3px;
+}
+.navbar .nav-link {
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    transition: background 0.2s, color 0.2s;
+    margin: 0 2px;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #fff !important;
+}
+
+/* ── Hero / Search Section ── */
+.hero-section {
+    padding: 2rem 0 1.5rem;
+}
+.search-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid #f0e6dc;
+}
+.search-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.25rem;
+}
+.search-title i {
+    color: var(--primary);
+}
+
+/* ── Ingredient Tags ── */
+.ingredient-input-area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 0.6rem 0.8rem;
+    border: 2px solid #e0d5c8;
+    border-radius: 12px;
+    min-height: 52px;
+    cursor: text;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #fff;
+}
+.ingredient-input-area:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(230, 92, 0, 0.1);
+}
+.ingredient-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: #fff3eb;
+    color: var(--primary-dark);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #ffd4b8;
+    animation: tagIn 0.2s ease;
+}
+@keyframes tagIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+.ingredient-tag .tag-remove {
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 0 2px;
+    color: #c44e00;
+    transition: color 0.15s;
+}
+.ingredient-tag .tag-remove:hover {
+    color: #900;
+}
+.ingredient-input-area input {
+    border: none;
+    outline: none;
+    flex: 1;
+    min-width: 120px;
+    font-size: 0.95rem;
+    padding: 4px 0;
+    background: transparent;
+}
+.ingredient-input-area input::placeholder {
+    color: #c4b8a8;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+    background: linear-gradient(135deg, #e65c00, #ff7b25);
+    border: none;
+    border-radius: 12px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: transform 0.15s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+    background: linear-gradient(135deg, #c44e00, #e65c00);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(230, 92, 0, 0.3);
+}
+.btn-outline-primary {
+    border-color: var(--primary);
+    color: var(--primary);
+    border-radius: 12px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+}
+.btn-outline-primary:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* ── Recipe Cards ── */
+.recipe-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid #f0e6dc;
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
+    position: relative;
+}
+.recipe-card:hover {
+    box-shadow: var(--card-hover-shadow);
+    transform: translateY(-2px);
+}
+.recipe-card .recipe-rank {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #999;
+    width: 28px;
+    flex-shrink: 0;
+}
+.recipe-card .match-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.match-high {
+    background: #d4edda;
+    color: #155724;
+}
+.match-mid {
+    background: #fff3cd;
+    color: #856404;
+}
+.match-low {
+    background: #f8d7da;
+    color: #721c24;
+}
+.recipe-card .recipe-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+}
+.recipe-card .recipe-meta {
+    font-size: 0.85rem;
+    color: #777;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.35rem;
+}
+.recipe-card .recipe-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+.recipe-card .recipe-missing {
+    font-size: 0.82rem;
+    color: #999;
+    margin-top: 0.4rem;
+}
+.recipe-card .badge-sub {
+    background: #e7d4ff;
+    color: #6f42c1;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+}
+
+/* ── Filter Section ── */
+.filters-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.75rem 0;
+}
+.filter-chip {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1.5px solid #ddd;
+    background: #fff;
+    transition: all 0.15s;
+    user-select: none;
+}
+.filter-chip:hover {
+    border-color: var(--primary-light);
+}
+.filter-chip.active {
+    background: #fff3eb;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+.filter-chip.tag-active {
+    background: #e8f5e9;
+    border-color: #4caf50;
+    color: #2e7d32;
+}
+
+/* ── Weekly Plan Cards ── */
+.plan-day-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 0.75rem;
+    box-shadow: var(--card-shadow);
+    border-left: 5px solid var(--primary);
+}
+.plan-day-card .day-number {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* ── Favorites / Rate list ── */
+.recipe-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    border: 1px solid #f0e6dc;
+}
+.recipe-list-item .star-rating {
+    color: #ffc107;
+    font-size: 0.9rem;
+}
+
+/* ── Modal Styles ── */
+.modal-content {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+.modal-header {
+    border-bottom: 1px solid #f0e6dc;
+    padding: 1.25rem 1.5rem;
+}
+.modal-body {
+    padding: 1.5rem;
+}
+.modal-body .step-item {
+    padding: 0.6rem 0;
+    border-bottom: 1px dashed #eee;
+}
+.modal-body .step-item:last-child {
+    border-bottom: none;
+}
+
+/* ── Shopping List in Modal ── */
+.shopping-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+}
+.shopping-item .item-tag {
+    font-size: 0.75rem;
+    padding: 1px 8px;
+    border-radius: 10px;
+}
+.tag-main { background: #fff3eb; color: #e65c00; }
+.tag-seasoning { background: #e8f5e9; color: #388e3c; }
+
+/* ── Loading Overlay ── */
+.spinner-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* ── No Results ── */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #bbb;
+}
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+.empty-state p {
+    font-size: 1.1rem;
+}
+
+/* ── Section Header ── */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.section-header h5 {
+    font-weight: 700;
+    color: #444;
+    margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .search-card { padding: 1.25rem; }
+    .recipe-card { padding: 1rem; }
+    .filters-bar { gap: 0.5rem; }
+}
+
+/* ── Sort Toggle Buttons ── */
+.sort-group .btn {
+    border-radius: 0;
+    border-color: #ddd;
+    font-size: 0.85rem;
+}
+.sort-group .btn:first-child { border-radius: 10px 0 0 10px; }
+.sort-group .btn:last-child  { border-radius: 0 10px 10px 0; }
+.sort-group .btn-check:checked + .btn {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+/* ── Substitution Toggle ── */
+.sub-toggle .form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* ── Dark helper text ── */
+.text-muted-2 { color: #aaa !important; }
